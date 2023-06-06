@@ -10,7 +10,7 @@ Detail the failure-inducing input and context. That might mean any or all of the
 
 The user runs a bash script named "run.sh" that is supposed to compile and execute the Java program. The Java program is supposed to check if a file named "test.txt" exists.
 
-![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212240.png)
+![Screenshot 2023-06-05 212240.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212240.png)
 ![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212231.png)
 ![image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20213825.png)
 ![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212231.png)
