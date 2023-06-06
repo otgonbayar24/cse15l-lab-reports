@@ -26,7 +26,7 @@ Added the following line of code in the Java program to print the absolute path 
 ![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20214311.png)
 
 After running the "run.sh" script again, got this output:
-![Image(https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20214316.png)
+![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20214316.png)
 Bug:
 
 The bug is due to the fact that the user first navigates into the src directory in the bash script and then tries to run the Java program. When the program runs, its working directory is src, and it's looking for the test.txt file in the src directory, but the test.txt file is in the root directory of the project.
@@ -37,9 +37,6 @@ To fix the bug, edit the "run.sh" bash script to first compile the Java program 
 ![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215317.png)
 ![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215321.png)
 ![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215325.png)
-
-This way, the input argument will be correctly passed to the Java program, and it should print the square of the input as expected.Here, /path/to/root_project_directory should be replaced by the actual path to the project's root directory. As you can see, the file path is now correct, and the Java program correctly reports that the file exists.
-
 
 
 Reflection
