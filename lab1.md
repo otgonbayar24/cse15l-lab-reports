@@ -10,10 +10,10 @@ Detail the failure-inducing input and context. That might mean any or all of the
 
 The user runs a bash script named "run.sh" that is supposed to compile and execute the Java program. The Java program is supposed to check if a file named "test.txt" exists.
 
-![Screenshot 2023-06-05 212240.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212240.png)
-![Screenshot 2023-06-05 212231.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212231.png)
-![Screenshot 2023-06-05 213825.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20213825.png)
-![Screenshot 2023-06-05 213830.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212231.png)
+![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212240.png)
+![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212231.png)
+![image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20213825.png)
+![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20212231.png)
 
 
 
@@ -23,20 +23,20 @@ Have you checked the working directory when the Java program is running? Try pri
 Follow-up:
 
 Added the following line of code in the Java program to print the absolute path of the file:
-![Screenshot 2023-06-05 214311.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20214311.png)
+![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20214311.png)
 
 After running the "run.sh" script again, got this output:
-![Screenshot 2023-06-05 214316.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20214316.png)
+![Image(https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20214316.png)
 Bug:
 
 The bug is due to the fact that the user first navigates into the src directory in the bash script and then tries to run the Java program. When the program runs, its working directory is src, and it's looking for the test.txt file in the src directory, but the test.txt file is in the root directory of the project.
 
 Bug Fixing Information:
 To fix the bug, edit the "run.sh" bash script to first compile the Java program in the src directory and then move back to the root directory before executing the Java program:
-![Screenshot 2023-06-05 215258.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215258.png)
-![Screenshot 2023-06-05 215317.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215317.png)
-![Screenshot 2023-06-05 215321.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215321.png)
-![Screenshot 2023-06-05 215325.png](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215325.png)
+![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215258.png)
+![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215317.png)
+![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215321.png)
+![Image](https://github.com/otgonbayar24/cse15l-lab-reports/blob/main/Screenshot%202023-06-05%20215325.png)
 
 This way, the input argument will be correctly passed to the Java program, and it should print the square of the input as expected.Here, /path/to/root_project_directory should be replaced by the actual path to the project's root directory. As you can see, the file path is now correct, and the Java program correctly reports that the file exists.
 
